@@ -1,0 +1,20 @@
+
+.botton_style {
+    background-color: midnightblue;
+    color: fuchsia;
+    border-radius: 30px;
+}
+
+.login_style {
+    background-color: lightblue;
+    color: black;
+
+}
+.Gradiance{
+    background-color: black;
+    color:#EEB142;
+    text-align: center;
+    font-size: xx-large;
+    font-style: normal;
+    font-family: sans-serif;
+}
