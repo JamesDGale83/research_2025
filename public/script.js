@@ -1,22 +1,26 @@
-document.addEventListener('DOMContentLoaded', function () {
+   
+       document.addEventListener('DOMContentLoaded', function () {
     const students = [
         {
             name: "Alice",
             course: "Intro",
             topic: "Recursion",
-            placeInQueue: 1
+            placeInQueue: 1,
+            other: "more info"
         },
         {
             name: "Bob",
             course: "Software",
             topic: "Integration by Parts",
-            placeInQueue: 2
+            placeInQueue: 2,
+            other: "more info"
         },
         {
             name: "Charlie",
             course: "Comp Sys",
             topic: "C+",
-            placeInQueue: 3
+            placeInQueue: 3,
+            other: "more info"
         }
     ];
 
@@ -31,32 +35,75 @@ document.addEventListener('DOMContentLoaded', function () {
             studentCard.setAttribute("data-index", index);
 
             studentCard.innerHTML = `
-                <strong>Place:</strong> ${student.placeInQueue} <br>
-                <strong>Name:</strong> ${student.name} <br>
-                <strong>Course:</strong> ${student.course} <br>
-                <strong>Topic:</strong> ${student.topic}
-            `;
+                <div class="row">
+                    <!-- Left: Place in Queue -->
+                    <div class="col-2 d-flex align-items-center justify-content-center fw-bold">
+                    ${student.placeInQueue}
+                    </div>
+
+                    <!-- Right: Name, Course, and Topic -->
+                    <div class="col-10">
+                    <div class="row">
+                        <div class="col-12 fw-bold text-end">
+                        ${student.name}
+                        </div>
+                        <div class="col-12 text-end text-muted small">
+                        ${student.course} – ${student.topic}
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                `;
 
             queueElement.appendChild(studentCard);
         });
     }
 
     document.addEventListener('click', function (e) {
-        if (e.target.closest('.student-card')) {
-            const card = e.target.closest('.student-card');
-            const index = card.getAttribute('data-index');
-            const student = students[index];
+    const clickedCard = e.target.closest('.student-card');
 
-            const studentDetails = document.getElementById("studentDetails");
-            if (studentDetails) {
-                studentDetails.innerHTML = `
-                    <h5>Student Details</h5>
-                    <p><strong>Name:</strong> ${student.name}</p>
-                    <p><strong>Course:</strong> ${student.course}</p>
-                    <p><strong>Topic:</strong> ${student.topic}</p>
-                    <p><strong>Place in Queue:</strong> ${student.placeInQueue}</p>
-                `;
-            }
+    if (clickedCard) {
+        // Remove highlight from all cards
+        document.querySelectorAll('.student-card').forEach(card => {
+            card.classList.remove('border-primary', 'border', 'shadow');
+        });
+
+        // Highlight the clicked card
+        clickedCard.classList.add('border', 'border-primary', 'shadow');
+
+        // Get student info
+        const index = clickedCard.getAttribute('data-index');
+        const student = students[index];
+        console.log("Selected student:", student.name);  // Debug output
+
+        // Make sure the "Student Info" tab is active
+        const studentInfoTab = new bootstrap.Tab(document.querySelector('#student-info-tab'));
+        studentInfoTab.show();
+
+        // Update student info section
+        const studentDetails = document.getElementById("studentDetails");
+        if (studentDetails) {
+            studentDetails.innerHTML = `
+                <div class="container-fluid">
+                    <div class="row mb-2">
+                        <div class="col-1"><strong>Name:</strong></div>
+                        <div class="col-1 text-end">${student.name}</div>
+                   
+                        <div class="col-1"><strong>Course:</strong></div>
+                        <div class="col-1 text-end">${student.course}</div>
+                    </div>
+                    <div class="row mb-2">
+                        <div class="col-1"><strong>Topic:</strong></div>
+                        <div class="col-1 text-end">${student.topic}</div>
+                        <div class="col-1"><strong>Other:</strong></div>
+                        <div class="col-1 text-end">${student.other}</div>
+                    </div>
+                </div>
+            `;
+
+
         }
-    });
+    }
+});
+
 });
