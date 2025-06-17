@@ -1,10 +1,20 @@
-body{
+html, body {
     height: 100%;;
 }
-.background-area{
-    max-height: 75vh;
-    background-color: rgb(247, 247, 247);
+body {
+    display: flex;
+    flex-direction: column;
+    overflow:hidden;
 }
+.container-fluid{
+    flex: 1 1 auto;
+  overflow-y: auto;
+  background-color: rgb(247, 247, 247);
+}
+.navbar {
+  flex: 0 0 auto;
+}
+
 .collapse.width {
     width: 0;
     height: auto;
@@ -22,12 +32,14 @@ body{
 }
 .question-row{
     background-color: rgb(255, 255, 255);
+    min-height:0;
 }
-.rounded-left{
+
+.rounded-top-left{
     border-top-left-radius: 0.25rem;  
-    border-bottom-left-radius: 0.25rem;
-    border-top-right-radius: 0;
-    border-bottom-right-radius: 0;
+}
+.rounded-top-right{
+    border-top-right-radius: 0.25rem;  
 }
 
 .nav-tabs .nav-link.active {
@@ -35,11 +47,23 @@ body{
   color: inherit;               /* match the text color of its parent */
   border-color: transparent;    /* remove that white bottom border */
 }
+.h-10{
+    height: 10%;
+}
 .h-20 {
     height:20%;
 }
 .h-80{
     height:80%;
+}
+.h-70{
+    height: 70%;
+}
+.h-30{
+    height: 30%;
+}
+.h-90{
+    height: 90%;
 }
 .list-group {
   width: 100%;
@@ -57,9 +81,11 @@ body{
     padding-right: 10px;
 }
 
-
 #studentQueue .card {
     background-color: #f8f9fa;
     border: 1px solid #ccc;
     overflow-wrap: break-word;
+}
+.question-info{
+    max-height: 100px;
 }
