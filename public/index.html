@@ -135,15 +135,54 @@
               </div>
             </div>
 
-            <!-- Follow-up Section -->
-            <div class="row bg-secondary h-30">
-              <p>Tabs for follow-up or additional comments will go here.</p>
+            <!-- Follow-up Section & comments -->
+            <div class="row bg-secondary p-3 h-30">
+              <div class="col-12 d-flex flex-column h-100">
+
+                <!-- Top 80%: Two-column layout -->
+                <div class="d-flex flex-grow-1 mb-3 gap-3">
+                  <!-- Follow-up Questions List (left side) -->
+                  <div class="bg-dark rounded-start p-2 w-40 overflow-auto">
+                    <h6 class="text-white">Follow-up Questions</h6>
+                    <div class="scrollable-list">
+                      <div class="list-group list-group-flush">
+                        <a href="#" class="list-group-item list-group-item-action active">Follow-up question 1</a>
+                        <a href="#" class="list-group-item list-group-item-action">Follow-up question 2</a>
+                        <a href="#" class="list-group-item list-group-item-action">Follow-up question 3</a>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Follow-up Info Panel (right side) -->
+                  <div class="bg-light border rounded-end p-2 w-60 overflow-auto">
+                    <h6>Follow-up Info</h6>
+                    <p>This panel will display details about the selected follow-up question.</p>
+                  </div>
+                </div>
+
+                <!-- Bottom 20%: Comments form -->
+                <div class="flex-shrink-0">
+                  <form class="h-100 d-flex flex-column">
+                    <div class="mb-2 flex-grow-1">
+                      <label for="followUpText" class="form-label text-white">Additional Comments</label>
+                      <textarea class="form-control h-100" id="followUpText" placeholder="Enter additional notes or comments..."></textarea>
+                    </div>
+                    <div>
+                      <button type="submit" class="btn btn-light">Submit</button>
+                    </div>
+                  </form>
+                </div>
+              </div>
             </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+            <!-- END Follow-up Section & comments-->
+
+
+
+          </div> <!--END Question Details-->
+        </div>  <!--END Question area-->
+      </div>  <!--END Main Area--> 
+    </div> <!--END row size 100-->
+  </div> <!--END Main Content-->
 
   <!-- Footer -->
   <footer class="bg-dark text-white text-center py-3 flex-shrink-0">
