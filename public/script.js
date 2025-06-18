@@ -85,18 +85,17 @@
         if (studentDetails) {
             studentDetails.innerHTML = `
                 <div class="container-fluid">
-                    <div class="row mb-2">
+                    <div class="row mb-1">
                         <div class="col-1"><strong>Name:</strong></div>
-                        <div class="col-1 text-end">${student.name}</div>
+                        <div class="col-2 text-end">${student.name}</div>
                    
                         <div class="col-1"><strong>Course:</strong></div>
-                        <div class="col-1 text-end">${student.course}</div>
-                    </div>
-                    <div class="row mb-2">
+                        <div class="col-2 text-end">${student.course}</div>
+                    
                         <div class="col-1"><strong>Topic:</strong></div>
-                        <div class="col-1 text-end">${student.topic}</div>
+                        <div class="col-2 text-end">${student.topic}</div>
                         <div class="col-1"><strong>Other:</strong></div>
-                        <div class="col-1 text-end">${student.other}</div>
+                        <div class="col-2 text-end">${student.other}</div>
                     </div>
                 </div>
             `;
