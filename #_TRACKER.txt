@@ -5,4 +5,4 @@ VEIW/ SCREEN    |  HTML      |  CSS        |  JS         |  OTHER INFO
 LOG-IN          |  STARTED   |   STARTED   |   STARTED   |  OTHER INFO
 NEW USER        |  STARTED   |   STARTED   |   STARTED   |  OTHER INFO
 INSTRUCTOR      |  STARTED   |   STARTED   |   STARTED   |  Know as index. Blocked out
-STUDENT         |  BLANK     |   BLANK     |   BLANK     |  OTHER INFO
+STUDENT         |  STARTED   |   STARTED   |   STARTED   |  Know as studentQueueView or studentInterviewView. Blocked out
