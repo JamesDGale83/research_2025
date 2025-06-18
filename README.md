@@ -5,6 +5,9 @@ public contains files
 if you make a big change put below this line but above the next.
 
 ____________________________________________________________----
+-edit June 18:  changed index.html follow-up and comment section.  
+    blocked out follow-up question. more info for follow up question and comments and made form for text submition comments
+__________________________________________________________________
 -Edit June 17: I added funtion to Student Queue, clicking on Student will display in StudentInfo Tab.
 __________________________________________________________________
 -Edit June 16: I added my index.html which is the instructor page but kept it seperate cuz didnt want to rewrite james's. I also added a js file that had all the script from instructor.html except 
