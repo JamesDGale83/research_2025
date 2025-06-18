@@ -1,0 +1,8 @@
+Sorry could see how to do a better tracker. tried a spread sheet but didn't look good.
+
+
+VEIW/ SCREEN    |  HTML      |  CSS        |  JS         |  OTHER INFO
+LOG-IN          |  STARTED   |   STARTED   |   STARTED   |  OTHER INFO
+NEW USER        |  STARTED   |   STARTED   |   STARTED   |  OTHER INFO
+INSTRUCTOR      |  STARTED   |   STARTED   |   STARTED   |  Know as index. Blocked out
+STUDENT         |  BLANK     |   BLANK     |   BLANK     |  OTHER INFO
