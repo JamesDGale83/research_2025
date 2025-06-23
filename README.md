@@ -3,7 +3,9 @@ coordination before we have access to full team.
 
 public contains files
 if you make a big change put below this line but above the next.
-
+______________________________________________________________
+-edit June 23:  made directory CSS for stylesheets and it contains directory theme for theme.  made directory JS for java script.
+                some time after last entry themes were made.  dark was chosen as best but needs some refining.
 ____________________________________________________________----
 -edit June 18:  changed index.html follow-up and comment section.  
     blocked out follow-up question. more info for follow up question and comments and made form for text submition comments
